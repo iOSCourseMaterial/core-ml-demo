@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Classifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-fx-Lh6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tif-fx-Lh6" secondAttribute="height" multiplier="1:1" id="TXZ-K9-jrc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wym-fx-Wqo">
+                                <rect key="frame" x="139" y="403" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IdY-8q-7sA"/>
+                                </constraints>
+                                <state key="normal" title="Pick an Image"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bae-JE-mlM">
+                                <rect key="frame" x="20" y="441" width="335" height="206"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tif-fx-Lh6" secondAttribute="trailing" id="9p2-1V-Fyr"/>
+                            <constraint firstItem="wym-fx-Wqo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PHl-rv-OuZ"/>
+                            <constraint firstItem="bae-JE-mlM" firstAttribute="top" secondItem="wym-fx-Wqo" secondAttribute="bottom" constant="8" id="ULN-Ex-aKN"/>
+                            <constraint firstItem="Tif-fx-Lh6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YRA-OR-udC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bae-JE-mlM" secondAttribute="bottom" constant="20" id="csd-kL-VpR"/>
+                            <constraint firstItem="bae-JE-mlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d0B-lG-cPw"/>
+                            <constraint firstItem="wym-fx-Wqo" firstAttribute="top" secondItem="Tif-fx-Lh6" secondAttribute="bottom" constant="8" id="jJR-8x-qdO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bae-JE-mlM" secondAttribute="trailing" constant="20" id="r75-dh-DPt"/>
+                            <constraint firstItem="Tif-fx-Lh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xO7-Gh-HL8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="bae-JE-mlM" id="eaO-aZ-MYj"/>
+                        <outlet property="imageView" destination="Tif-fx-Lh6" id="IP3-02-mRI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
